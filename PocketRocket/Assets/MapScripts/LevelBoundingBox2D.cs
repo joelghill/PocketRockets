@@ -53,14 +53,14 @@ public class LevelBoundingBox2D : MonoBehaviour, IBoundingBox2d {
 
     public BoundingEdges GetBoundingEdges()
     {
-        var bounds = new BoundingEdges();
+        var bounds = new BoundingEdges()
+        {
+            Right = this.GetRightEdge(),
+            Left = this.GetLeftEdge(),
 
-        bounds.Right = this.GetRightEdge();
-        bounds.Left = this.GetLeftEdge();
-
-        bounds.Top = this.GetTopEdge();
-        bounds.Bottom = this.GetBottomEdge();
-
+            Top = this.GetTopEdge(),
+            Bottom = this.GetBottomEdge()
+        };
         return bounds;
     }
 }
