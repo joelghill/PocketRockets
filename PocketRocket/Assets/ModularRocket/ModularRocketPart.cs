@@ -29,6 +29,11 @@ namespace PocketRockets.ModularRocket
         public bool IsRootRocketPart = false;
 
         /// <summary>
+        /// A referenc to the root rocket part
+        /// </summary>
+        public ModularRocketPart RootPart;
+
+        /// <summary>
         /// Event that occurs when parts are added to or removed from this rocket part.
         /// </summary>
         public event PartsListChangedEventHandler PartListChanged;
@@ -59,6 +64,7 @@ namespace PocketRockets.ModularRocket
         {
             if (this.IsRootRocketPart)
             {
+                this.RootPart = this;
                 this.InitializeParts();
             }
         }
@@ -143,6 +149,7 @@ namespace PocketRockets.ModularRocket
             {
                 if (this.RocketParts.Contains(part) == false)
                 {
+                    part.RootPart = this.RootPart;
                     this.RocketParts.Add(part);
 
                     if (part.IsEnabled() == false)

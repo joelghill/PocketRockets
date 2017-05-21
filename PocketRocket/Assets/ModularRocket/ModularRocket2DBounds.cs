@@ -66,5 +66,10 @@ namespace PocketRockets.ModularRocket
                 Bottom = this.GetBottomEdge()
             };
         }
+
+        public Vector3 GetPosition()
+        {
+            return this.RocketBounds.center;
+        }
     }
 }

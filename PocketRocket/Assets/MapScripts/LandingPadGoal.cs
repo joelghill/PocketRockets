@@ -56,6 +56,12 @@ namespace PocketRockets.Levels
                 }
             }
         }
+
+        public Vector3 CurrentPosition()
+        {
+            var renderer = this.gameObject.GetComponent<Renderer>();
+            return renderer.bounds.center;
+        }
     }
 }
 

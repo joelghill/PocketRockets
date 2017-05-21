@@ -37,6 +37,8 @@ namespace PocketRockets.Levels
         /// </summary>
         /// <param name="isTargetReached">A value indicating whether or not the target has been reached</param>
         void SetTargetState(bool isTargetReached);
+
+        Vector3 CurrentPosition();
     }
 }
 

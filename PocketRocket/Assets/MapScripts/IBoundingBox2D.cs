@@ -15,6 +15,8 @@ namespace PocketRockets
 
         float GetBottomEdge();
 
+        Vector3 GetPosition();
+
         BoundingEdges GetBoundingEdges();
     }
 }

@@ -59,6 +59,11 @@ namespace PocketRockets.Levels
         {
             throw new NotImplementedException();
         }
+
+        ILevelGoal IGoalCollection.GetCurrentGoal()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

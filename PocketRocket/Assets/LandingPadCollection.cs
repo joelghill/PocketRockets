@@ -20,7 +20,7 @@ namespace PocketRockets.Levels
 
         public ILevelGoal GetCurrentGoal()
         {
-            if(this.LevelGoals != null)
+            if(this.LevelGoals != null && this.currentIndex < this.LevelGoals.Count())
             {
                 var currentObject = this.LevelGoals[this.currentIndex];
                 return currentObject.GetComponent<ILevelGoal>();
